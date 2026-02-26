@@ -1,0 +1,27 @@
+name: infra
+on:
+  push:
+    branches:
+      - "main"
+
+permissions:
+    id-token: write
+
+jobs:
+    update-repo:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v6
+            - uses: oven-sh/setup-bun@v2
+            - uses: actions/setup-node@v6
+            - uses: pulumi/auth-actions@v1
+              with: 
+                organization: pierskarsenbarg
+                requested-token-type: urn:pulumi:token-type:access_token:personal
+                scope: user:pierskarsenbarg
+            - uses: pulumi/actions@v6
+              with:
+                pulumi-version: latest
+                command: preview
+                stack-name: dev
+            

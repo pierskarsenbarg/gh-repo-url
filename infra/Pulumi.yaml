@@ -1,0 +1,10 @@
+name: gh-repo-url-repo
+description: Pulumi program to maintain the repo for the gh-repo-url extension
+runtime:
+  name: nodejs
+  options:
+    packagemanager: bun
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: typescript
