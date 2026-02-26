@@ -26,4 +26,6 @@ jobs:
                 command: update
                 stack-name: dev
                 work-dir: ./infra
+              env: 
+                GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
             
