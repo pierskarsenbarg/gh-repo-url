@@ -23,7 +23,7 @@ jobs:
             - uses: pulumi/actions@v6
               with:
                 pulumi-version: latest
-                command: preview
+                command: update
                 stack-name: dev
                 work-dir: ./infra
             
