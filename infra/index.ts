@@ -26,3 +26,10 @@ const defaultBranch = new github.BranchDefault("main-branch", {
 }, {
     protect: true
 });
+
+const extensionTopic = new github.RepositoryTopics("topics", {
+    repository: repo.name,
+    topics: [
+        "gh-extension"
+    ]
+})
