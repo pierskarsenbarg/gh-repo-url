@@ -11,6 +11,6 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	} else {
-		fmt.Printf("https://%s/%s/%s\n", repo.Host, repo.Owner, repo.Name)
+		fmt.Printf("https://%s/%s/%s", repo.Host, repo.Owner, repo.Name)
 	}
 }
