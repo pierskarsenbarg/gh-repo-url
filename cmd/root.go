@@ -18,12 +18,12 @@ var rootCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
-		format, err := cmd.Flags().GetString("format")
+		ssh, err := cmd.Flags().GetBool("ssh")
 		if err != nil {
 			return err
 		}
 		formatString := "https://%s/%s/%s"
-		if format == "ssh" {
+		if ssh {
 			fmt.Fprintf(cmd.OutOrStdout(), "git@%s:%s/%s.git", repo.Host, repo.Owner, repo.Name)
 		} else {
 			fmt.Fprintf(cmd.OutOrStdout(), formatString, repo.Host, repo.Owner, repo.Name)
@@ -40,5 +40,5 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.Flags().StringP("format", "f", "", "Return repo url in format for ssh. i.e. git@github.com:pierskarsenbarg/gh-repo-url.git")
+	rootCmd.Flags().BoolP("ssh", "s", false, "Return repo url in format for ssh. i.e. git@github.com:pierskarsenbarg/gh-repo-url.git")
 }
