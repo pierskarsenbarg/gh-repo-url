@@ -12,9 +12,10 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "gh-repo-url",
-	Args:  cobra.ExactArgs(0),
-	Short: "GitHub CLI extension for getting current repository's URL",
+	Use:          "gh-repo-url",
+	Args:         cobra.ExactArgs(0),
+	Short:        "GitHub CLI extension for getting current repository's URL",
+	SilenceUsage: true,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		repo, err := repository.Current()
 		if err != nil {
