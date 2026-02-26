@@ -74,7 +74,7 @@ echo "Repository URL: $repo_url"
 
 ### Not in a Git Repository
 
-**Error**: The command fails silently or outputs nothing
+**Error**: The command outputs an error message indicating it cannot determine the current repository
 **User Communication**: "You're not currently in a Git repository. Please run this command from within a Git repository directory."
 
 ### No GitHub Context
