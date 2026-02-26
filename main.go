@@ -1,16 +1,10 @@
+/*
+Copyright © 2026 NAME HERE <EMAIL ADDRESS>
+*/
 package main
 
-import (
-	"fmt"
-
-	"github.com/cli/go-gh/v2/pkg/repository"
-)
+import "github.com/pierskarsenbarg/gh-repo-url/cmd"
 
 func main() {
-	repo, err := repository.Current()
-	if err != nil {
-		fmt.Println(err)
-	} else {
-		fmt.Printf("https://%s/%s/%s", repo.Host, repo.Owner, repo.Name)
-	}
+	cmd.Execute()
 }
