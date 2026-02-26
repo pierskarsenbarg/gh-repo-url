@@ -24,9 +24,9 @@ var rootCmd = &cobra.Command{
 		}
 		formatString := "https://%s/%s/%s"
 		if format == "ssh" {
-			fmt.Printf("git@%s:%s/%s.git", repo.Host, repo.Owner, repo.Name)
+			fmt.Fprintf(cmd.OutOrStdout(), "git@%s:%s/%s.git", repo.Host, repo.Owner, repo.Name)
 		} else {
-			fmt.Printf(formatString, repo.Host, repo.Owner, repo.Name)
+			fmt.Fprintf(cmd.OutOrStdout(), formatString, repo.Host, repo.Owner, repo.Name)
 		}
 		return nil
 	},
