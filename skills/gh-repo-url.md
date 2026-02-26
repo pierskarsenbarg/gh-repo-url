@@ -89,16 +89,6 @@ echo "Repository URL: $repo_url"
 
 ## Integration Examples
 
-### Using with GitHub API Calls
-
-```bash
-repo_url=$(gh repo-url)
-# Extract owner/repo from URL
-repo_info=$(echo "$repo_url" | sed 's|.*/||' | sed 's|/|:|')
-# Use in API calls
-gh api repos/$repo_info
-```
-
 ### Creating Repository Links in Automation
 
 ```bash
