@@ -4,9 +4,9 @@ GitHub CLI extension to return the url for the repository associated with the cu
 
 ## Installation
 
-You need to have the GitHub CLI already installed: <https://cli.github.com>
+You need to have the GitHub CLI already installed: <https://cli.github.com> and you need to be logged in as well: `gh login`.
 
-To install this extension run: 
+To install this extension run:
 
 ```console
 gh extension install pierskarsenbarg/gh-repo-url
