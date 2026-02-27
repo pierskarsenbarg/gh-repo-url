@@ -12,3 +12,15 @@ updates:
     commit-message:
       prefix: "chore"
       prefix-development: "chore"
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: tuesday
+      time: "04:00"
+      timezone: "Europe/London"
+    assignees:
+      - pierskarsenbarg
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
