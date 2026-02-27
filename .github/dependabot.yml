@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: gomod
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: tuesday
+      time: "04:00"
+      timezone: UTC
+    assignees:
+      - pierskarsenbarg
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
