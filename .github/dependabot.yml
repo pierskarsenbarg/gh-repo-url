@@ -12,6 +12,10 @@ updates:
     commit-message:
       prefix: "chore"
       prefix-development: "chore"
+    groups:
+      gomod-updates:
+        patterns:
+          - "*"
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
