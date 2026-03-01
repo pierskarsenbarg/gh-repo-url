@@ -22,11 +22,11 @@ var rootCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
-		formatString := "https://%s/%s/%s"
+
 		if ssh {
 			fmt.Fprintf(cmd.OutOrStdout(), "git@%s:%s/%s.git", repo.Host, repo.Owner, repo.Name)
 		} else {
-			fmt.Fprintf(cmd.OutOrStdout(), formatString, repo.Host, repo.Owner, repo.Name)
+			fmt.Fprintf(cmd.OutOrStdout(), "https://%s/%s/%s", repo.Host, repo.Owner, repo.Name)
 		}
 		return nil
 	},
