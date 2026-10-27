@@ -1,8 +1,8 @@
 module github.com/pierskarsenbarg/gh-repo-url
 
-go 1.25.5
+go 1.26.7
 
-require github.com/cli/go-gh/v2 v2.16.2
+require github.com/cli/go-gh/v2 v2.17.0
 
 require (
 	github.com/cli/safeexec v1.0.1 // indirect
