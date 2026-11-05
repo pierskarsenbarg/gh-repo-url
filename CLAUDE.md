@@ -66,4 +66,4 @@ git push origin v0.0.X
 - `main.go` - Entry point
 - `cmd/root.go` - Root command with all business logic
 - `.github/workflows/release.yml` - Release automation
-- `go.mod` - Go module definition (requires Go 1.25.5+)
+- `go.mod` - Go module definition (sets the Go version; CI reads it via `go-version-file`)
